@@ -28,7 +28,8 @@
             selector: '#mytextarea',
             plugins: "anchor hr image link codesample fullscreen insertdatetime lists media table textcolor colorpicker paste",
             toolbar: 'codesample | bold italic sizeselect fontselect fontsizeselect | hr alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | insertfile undo redo | forecolor backcolor emoticons | code',
-            images_upload_url: 'postAcceptor.php',
+            paste_data_images: true
+            images_upload_url: '/home/Upload',
             color_picker_callback: function (callback, value) {
                 callback('#FF00FF');
             }
