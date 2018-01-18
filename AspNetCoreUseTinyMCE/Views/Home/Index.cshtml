@@ -19,14 +19,16 @@
     <script src="~/tinymce/plugins/table/plugin.min.js"></script>
     <script src="~/tinymce/plugins/textcolor/plugin.min.js"></script>
     <script src="~/tinymce/plugins/colorpicker/plugin.min.js"></script>
+    <script src="~/tinymce/plugins/preview/plugin.min.js"></script>
     <script src="~/tinymce/plugins/paste/plugin.min.js"></script>
+    <script src="~/tinymce/plugins/code/plugin.min.js"></script>
 
 
     <script src="~/tinymce/langs/zh_CN.js"></script>
     <script>
         tinymce.init({
             selector: '#mytextarea',
-            plugins: "anchor hr image link codesample fullscreen insertdatetime lists media table textcolor colorpicker paste",
+            plugins: "code preview anchor hr image link codesample fullscreen insertdatetime lists media table textcolor colorpicker paste",
             toolbar: 'codesample | bold italic sizeselect fontselect fontsizeselect | hr alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | insertfile undo redo | forecolor backcolor emoticons | code',
             paste_data_images: true,
             images_upload_url: '/home/Upload',
