@@ -7,29 +7,21 @@
 
 @section Scripts{
     <script src="~/tinymce/tinymce.min.js"></script>
-    <script src="~/tinymce/plugins/anchor/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/hr/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/image/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/link/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/codesample/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/fullscreen/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/insertdatetime/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/lists/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/media/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/table/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/textcolor/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/colorpicker/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/preview/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/paste/plugin.min.js"></script>
-    <script src="~/tinymce/plugins/code/plugin.min.js"></script>
-
 
     <script src="~/tinymce/langs/zh_CN.js"></script>
     <script>
         tinymce.init({
             selector: '#mytextarea',
-            plugins: "code preview anchor hr image link codesample fullscreen insertdatetime lists media table textcolor colorpicker paste",
-            toolbar: 'codesample | bold italic sizeselect fontselect fontsizeselect | hr alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | insertfile undo redo | forecolor backcolor emoticons | code',
+            language: 'zh_CN',
+            plugins: "print code preview anchor hr image link codesample fullscreen insertdatetime lists media table textcolor colorpicker paste searchreplace emoticons help",
+            // TinyMCE默认工具栏包含以下按钮
+            //toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent',
+
+            // 自己定义工具栏
+            //toolbar: 'codesample | bold italic sizeselect fontselect fontsizeselect | hr alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | insertfile undo redo | forecolor backcolor emoticons | code',
+            toolbar: 'undo redo | styleselect | bold italic fontselect forecolor | alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist outdent indent | link image | print preview media fullpage | ' +
+                'backcolor emoticons | help',
             paste_data_images: true,
             images_upload_url: '/home/Upload',
             color_picker_callback: function (callback, value) {
