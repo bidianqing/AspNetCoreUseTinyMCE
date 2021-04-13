@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using AspNetCoreUseTinyMCE.Models;
-using Microsoft.AspNetCore.Http;
-using System.IO;
+﻿using AspNetCoreUseTinyMCE.Models;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace AspNetCoreUseTinyMCE.Controllers
 {
     public class HomeController : Controller
     {
-        private IHostingEnvironment _environment;
+        private readonly IWebHostEnvironment _environment;
 
-        public HomeController(IHostingEnvironment environment)
+        public HomeController(IWebHostEnvironment environment)
         {
             _environment = environment;
         }
